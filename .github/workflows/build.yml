@@ -1,0 +1,46 @@
+name: Build PDF
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          compiler: pdflatex
+          args: "-pdf -interaction=nonstopmode -halt-on-error"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CV_Mahfuz_Raihan
+          path: main.pdf
+
+      - name: Prepare for deployment
+        run: |
+          mkdir -p public
+          cp main.pdf public/CV_Mahfuz_Raihan.pdf
+          # Also keep a copy as index.pdf for direct links
+          cp main.pdf public/index.pdf
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true
