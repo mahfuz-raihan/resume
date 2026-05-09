@@ -1,0 +1,156 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- UNIVERSAL PREAMBLE BLOCK ---
+\usepackage[a4paper, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+
+% Formatting
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\Huge \bfseries Mahfuz Raihan} \\ \vspace{5pt}
+    \small +8801743281926 $|$ \href{mailto:mahfuz.raihan.ict@gmail.com}{mahfuz.raihan.ict@gmail.com} \\
+    \href{https://github.com/mahfuz-raihan}{GitHub: mahfuz-raihan} $|$ \href{https://www.linkedin.com/in/mahfuzraihan/}{LinkedIn: mahfuzraihan} \\
+    \small 54/1, West Rajabazar, Sher-e-Bangla Nagar, Dhaka-1207
+\end{center}
+
+% --- SUMMARY ---
+\section{Summary}
+Highly motivated and results-driven AI/ML Engineer with a strong background in designing, training, and deploying scalable AI solutions. Expertise includes building product recommender systems, advanced RAG-based AI Chatbots with Agentic capabilities, and robust model serving infrastructure. Skilled in NLP with experience in LangChain, LangGraph, PyTorch, and scikit-learn. Proven ability to establish automated data pipelines, manage ML experimentation, and implement comprehensive model evaluation frameworks. Experienced in deploying production-grade models on Azure ML with integrated monitoring for drift and performance.
+
+% --- SKILLS ---
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \begin{tabular}{@{}p{3.8cm} p{13.4cm}}
+      \textbf{Languages/Core} & : Python, SQL (PostgreSQL, MSSQL, BigQuery), C++ \\
+      \textbf{ML/DL Frameworks} & : PyTorch, Scikit-learn, OpenCV, NLTK, SpaCy, Detectron2 \\
+      \textbf{Generative AI/LLM} & : LangChain, LangGraph, OpenClaw, Llama 3, OpenAI CLIP, RAG, Agentic AI \\
+      \textbf{MLOps \& Cloud} & : Azure ML, Azure DevOps, MLflow, Docker, GitHub Actions, CI/CD, PyTest \\
+      \textbf{Data Engineering} & : Pandas, Dask, NumPy, SQLAlchemy, ChromaDB, FAISS, Vector Databases \\
+      \textbf{Visualization} & : Matplotlib, Plotly, Streamlit, Google Looker Studio
+     \end{tabular}
+    }}
+ \end{itemize}
+
+% --- EXPERIENCE ---
+\section{Professional Experience}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    
+    \resumeSubheading
+      {Machine Learning Engineer}{May 2025 -- Present}
+      {Brain Station 23}{Dhaka, Bangladesh}
+      \begin{itemize}
+        \resumeItem{Engineered production-grade personalized recommendation engines utilizing behavioral and demographic data, enhancing user engagement.}
+        \resumeItem{Built scalable data pipelines for high-throughput model training and serving, ensuring low-latency inference.}
+        \resumeItem{Implemented MLOps best practices using \textbf{MLflow} for experiment tracking and model versioning, reducing deployment friction.}
+        \resumeItem{Architected an Enterprise RAG-based AI Chatbot using \textbf{LangChain} and \textbf{LangGraph} for internal knowledge management.}
+        \resumeItem{Automated document data extraction using \textbf{Azure Document Intelligence}, improving text processing efficiency.}
+        \resumeItem{Deployed ML services on \textbf{Azure Machine Learning} with integrated \textbf{CI/CD} and performance monitoring to detect model drift.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Jr. Data Scientist}{Nov 2023 -- April 2025}
+      {Tallykhata / TallyPay (Progoti Systems Limited)}{Dhaka, Bangladesh}
+      \begin{itemize}
+        \resumeItem{Developed a predictive churn model to identify high-value "Premium" customers, enabling targeted retention strategies.}
+        \resumeItem{Designed 10+ dynamic real-time KPI dashboards using \textbf{BigQuery} to monitor transactional and user growth metrics.}
+        \resumeItem{Optimized SQL functions in \textbf{PostgreSQL} to analyze complex customer behavioral journeys for business intelligence.}
+        \resumeItem{Monitored model performance using \textbf{MLflow} and \textbf{TensorBoard}, performing hyperparameter tuning to increase F1-scores.}
+        \resumeItem{Automated stakeholder reporting by building a Python-based delivery system connected to the central data warehouse.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Trainee Jr. Data Scientist}{June 2023 -- Oct 2023}
+      {Tallykhata}{Dhaka, Bangladesh}
+      \begin{itemize}
+        \resumeItem{Automated routine data warehousing tasks using Python scripts, saving significant manual effort per week.}
+        \resumeItem{Executed advanced analytics queries to support decision-making for various product stakeholders.}
+      \end{itemize}
+
+  \end{itemize}
+
+% --- PROJECTS ---
+\section{Key Projects}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+      
+      \resumeProjectHeading
+        {\textbf{NetOps-AI Agent: Autonomous SOC} $|$ \textit{Python, Llama 3, PyTorch, FastAPI, Docker}}{}
+        \begin{itemize}
+          \resumeItem{Developed an autonomous AI agent for real-time cyber threat detection and filtering using zero-shot learning.}
+          \resumeItem{Integrated a Human-in-the-Loop (HITL) dashboard for administrative oversight of AI-driven security responses.}
+        \end{itemize}
+
+      \resumeProjectHeading
+        {\textbf{Agentic Self-Reflective RAG System} $|$ \textit{LangChain, LangGraph, FAISS, Azure OpenAI}}{}
+        \begin{itemize}
+          \resumeItem{Built a state-machine driven RAG pipeline with self-reflection capabilities to verify and retry retrieval failures.}
+          \resumeItem{Implemented vectorized document processing for diverse file types (PDF, XLSX) using \textbf{FAISS} embeddings.}
+        \end{itemize}
+
+      \resumeProjectHeading
+        {\textbf{Bengali Vehicle Plate Detection (YOLO)} $|$ \textit{PyTorch, YOLOv10, OpenCV}}{}
+        \begin{itemize}
+          \resumeItem{Achieved \textbf{97\% accuracy} in detecting and extracting Bengali text from vehicle number plates in real-time environments.}
+        \end{itemize}
+
+    \end{itemize}
+
+% --- EDUCATION ---
+\section{Education}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {Islamic University, Bangladesh}{2016 -- 2022}
+      {B.Sc. in Information and Communications Technology}{}
+  \end{itemize}
+
+% --- CERTIFICATIONS & AWARDS ---
+\section{Certifications \& Awards}
+\begin{itemize}[leftmargin=0.15in]
+    \small{\item{
+    \textbf{Certifications:} Machine Learning for Production (Coursera), Deep Learning with PyTorch: GAN, IBM Data Science Professional. \\
+    \textbf{Awards:} 1st Runner Up, SUST ICT Fest 2019 (Project: IoT Home Automation); Champion, Central Science Fair 2018 \& 2019.
+    }}
+\end{itemize}
+
+\end{document}
