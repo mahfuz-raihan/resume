@@ -1,13 +1,15 @@
 \documentclass[11pt, a4paper]{article}
 
 % --- UNIVERSAL PREAMBLE BLOCK ---
-\usepackage[a4paper, top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage[a4paper, top=1.5cm, bottom=1.5cm, left=0.75cm, right=0.75cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
+% \usepackage{setspace}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
 
+% \setstretch{0.9} % Adjusts global line spacing (1.0 is default, <1.0 is tighter)
 
 % Formatting
 \hypersetup{
@@ -19,7 +21,7 @@
 
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
 
 \newcommand{\resumeItem}[1]{
   \item\small{
@@ -79,7 +81,7 @@ Highly motivated and results-driven ML Engineer with a strong background in deve
   \begin{itemize}[leftmargin=0.02in, label={}]
     \resumeSubheading
       {Machine Learning Engineer}{May 2025 -- Present}
-      {\href{https://brainstation-23.com}{Brain Station 23}}{Dhaka, Bangladesh}
+      {\href{https://brainstation-23.com}{Brain Station 23 }{-- MetLife}}{Dhaka, Bangladesh}
       \begin{itemize}
         \resumeItem{Developed production-grade personalized recommendations engine, increases customer engagement 17\% and reduces training time 70\%}
         \resumeItem{Built scalable and robust data pipelines, reduces time 80\%}
@@ -112,7 +114,7 @@ Highly motivated and results-driven ML Engineer with a strong background in deve
 
 % --- PROJECTS ---
 \section{Key Projects}
-    \begin{itemize}[leftmargin=0.15in, label={}]
+    \begin{itemize}[leftmargin=0.02in, label={}]
       
       \resumeProjectHeading
         {\textbf{NetOps-AI Agent: Autonomous SOC} $|$ \textit{Python, Llama 3, PyTorch, FastAPI, Docker}}{}
@@ -138,7 +140,7 @@ Highly motivated and results-driven ML Engineer with a strong background in deve
 
 % --- EDUCATION ---
 \section{Education}
-  \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0.02in, label={}]
     \resumeSubheading
       {Islamic University, Bangladesh}{2016 -- 2022}
       {B.Sc. in Information and Communications Technology}{}
@@ -146,7 +148,7 @@ Highly motivated and results-driven ML Engineer with a strong background in deve
 
 % --- CERTIFICATIONS & AWARDS ---
 \section{Certifications \& Awards}
-\begin{itemize}[leftmargin=0.15in]
+\begin{itemize}[leftmargin=0.02in]
     \small{\item{
     \textbf{Certifications:} Machine Learning for Production (Coursera), Deep Learning with PyTorch: GAN, IBM Data Science Professional. \\
     \textbf{Awards:} 1st Runner Up, SUST ICT Fest 2019 (Project: IoT Home Automation); Champion, Central Science Fair 2018 \& 2019.
