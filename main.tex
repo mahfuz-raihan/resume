@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper]{article}
+\documentclass[10pt, a4paper]{article}
 
 % --- UNIVERSAL PREAMBLE BLOCK ---
 \usepackage[a4paper, top=1.5cm, bottom=1.5cm, left=0.75cm, right=0.75cm]{geometry}
@@ -31,7 +31,7 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \begin{tabular*}{\linewidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
       \textbf{#1} & \small#2 \\
       \textit{\small#3} & \textit{\footnotesize #4} \\
     \end{tabular*}\vspace{-7pt}
@@ -39,7 +39,7 @@
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.0\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
       \small#1 & \small#2 \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -69,8 +69,9 @@ Highly motivated and results-driven ML Engineer with a strong background in deve
       \textbf{ML/DL Frameworks} & : PyTorch, Scikit-learn, OpenCV, NLTK, SpaCy, torchtext \\
       \textbf{Generative AI/LLM} & : LangChain, LangGraph, OpenClaw, Ollama \\
       \textbf{MLOps \& Cloud} & : Azure ML, MLflow, Docker, GitHub Actions, Git, PyTest \\
-      \textbf{Data \& Analytics} & : Pandas, Dask, NumPy, SQLAlchemy, ChromaDB, FAISS \\
-      \textbf{Visualization} & : Matplotlib, Plotly, Streamlit, Google Looker Studio \\
+      \textbf{Data \& Analytics} & : Pandas, Dask, NumPy, Google Looker Studio, SQLAlchemy \\
+      \textbf{Vector DB} & : FAISS, ChromaDB, pgvector \\
+      \textbf{Visualization} & : Matplotlib, Plotly, Streamlit \\
       \textbf{API Frameworks} & : FastAPI, Flask \\
      \end{tabular}
     }}
@@ -106,34 +107,54 @@ Highly motivated and results-driven ML Engineer with a strong background in deve
       {Trainee Jr. Data Scientist}{June 2023 -- Oct 2023}
       {\href{https://www.tallykhata.com/en/home-eng/}{Tallykhata / TallyPay (Progoti Systems Limited)}}{Dhaka, Bangladesh}
       \begin{itemize}
-        \resumeItem{Worked on Tallykhata Data warehouse and database management system, developed task automation using Python.}
-        \resumeItem{Executed advanced analytics queries to support decision-making for various product stakeholders.}
+        \resumeItem{Worked on \textbf{Tallykhata Data warehouse}, developed \textbf{task automation} using Python.}
+        \resumeItem{Implemented \textbf{advanced analytics queries} to support decision-making for various product stakeholders.}
+        \resumeItem{Created and optimized \textbf{SQL queries} to analyze complex customer behavioral patterns and identify key business insights.}
+        \resumeItem{Collaborated with cross-functional teams to understand business requirements and deliver data-driven solutions.}
+        \resumeItem{Built \textbf{ML models} to identify and prevent fraudulent transactions. F1 score: 0.70 to 0.86}
       \end{itemize}
 
   \end{itemize}
 
 % --- PROJECTS ---
-\section{Key Projects}
+\section{Projects/Open Source}
     \begin{itemize}[leftmargin=0.02in, label={}]
       
       \resumeProjectHeading
-        {\textbf{NetOps-AI Agent: Autonomous SOC} $|$ \textit{Python, Llama 3, PyTorch, FastAPI, Docker}}{}
+        {\textbf{NetOps-AI Agent: Autonomous SOC} $|$ \textit{OpenClaw, Llama 3.3, PyTorch, FastAPI, SpaCy}}{\href{https://github.com/mahfuz-raihan/netops-ai-agent}{GitHub}}
         \begin{itemize}
           \resumeItem{Developed an autonomous AI agent for real-time cyber threat detection and filtering using zero-shot learning.}
           \resumeItem{Integrated a Human-in-the-Loop (HITL) dashboard for administrative oversight of AI-driven security responses.}
+          \resumeItem{Utilized \textbf{OpenClaw}'s flexible LLM framework to orchestrate threat analysis, enabling high-performance zero-shot detection.}
+          \resumeItem{Leveraged \textbf{FastAPI} to build a scalable backend API and implemented \textbf{PyTorch} for efficient model inference.}
+          \resumeItem{Designed a production-ready system architecture, ensuring reliability and scalability for enterprise security operations.}
         \end{itemize}
 
       \resumeProjectHeading
-        {\textbf{Agentic Self-Reflective RAG System} $|$ \textit{LangChain, LangGraph, FAISS, Azure OpenAI}}{}
+        {\textbf{Intelligent Data Assistant -- Agentic RAG System} $|$ \textit{LangChain, LangGraph, FAISS, Azure OpenAI}}{\href{https://github.com/mahfuz-raihan/agentic-rag-system}{GitHub}}
         \begin{itemize}
           \resumeItem{Built a state-machine driven RAG pipeline with self-reflection capabilities to verify and retry retrieval failures.}
           \resumeItem{Implemented vectorized document processing for diverse file types (PDF, XLSX) using \textbf{FAISS} embeddings.}
+          \resumeItem{Integrated \textbf{Azure OpenAI} for advanced text understanding and information extraction capabilities.}
+          \resumeItem{Generate dynamic Plotly charts from user-uploaded datasets.}
+          \resumeItem{Designed a production-ready system architecture, ensuring reliability and scalability for enterprise security operations.}
+        \end{itemize}
+      
+      \resumeProjectHeading
+        {\textbf{Small Scale AI Search Engine: Text to Image Search} $|$ \textit{PyTorch, OpenAI CLIP,FastAPI, ChromaDB}}{\href{https://github.com/mahfuz-raihan/text_to_image_search_demo.git}{GitHub}}
+        \begin{itemize}
+          \resumeItem{Retrieval based text to image search engine using \textbf{OpenAI CLIP} Model.}
+          \resumeItem{Implemented vector search using \textbf{ChromaDB} for efficient image retrieval.}
+          \resumeItem{Integrated \textbf{FastAPI} to build a scalable backend API and implemented \textbf{PyTorch} for efficient model inference.}
+          \resumeItem{Find the most relevant images by calculating the cosine similarity between text and image embeddings.}
+          \resumeItem{Explored the use of \textbf{OpenAI CLIP} Model to understand the semantic content of both text and images.}
         \end{itemize}
 
       \resumeProjectHeading
         {\textbf{Bengali Vehicle Plate Detection (YOLO)} $|$ \textit{PyTorch, YOLOv10, OpenCV}}{}
         \begin{itemize}
           \resumeItem{Achieved \textbf{97\% accuracy} in detecting and extracting Bengali text from vehicle number plates in real-time environments.}
+          \resumeItem{Use for Production in any system where this is needed. }
         \end{itemize}
 
     \end{itemize}
